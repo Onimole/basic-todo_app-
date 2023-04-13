@@ -1,0 +1,13 @@
+{% extends 'Todo_apps/base.html' %}
+{%block content%}
+<h3><strong>signup</strong><h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="signup">
+    </form>
+    
+    <p>already have an account?<a href="{% url 'login'%}"><strong>Login</strong></a></p>
+
+{%endblock content%}
